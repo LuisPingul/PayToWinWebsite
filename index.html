@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pay to Win — Official Game Website &amp; Tactical Survival Portal</title>
+  <meta name="description" content="Pay to Win is a 7-day post-apocalyptic third-person survival horde shooter built in Unity 2022.3.62f3 LTS. Watch the official trailer, explore the 6-weapon arsenal, and survive until dawn." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2313171F' stroke='%23F2AD38' stroke-width='2'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='monospace' font-size='13' font-weight='700' fill='%23F2AD38'%3EP%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Reading Progress Indicator -->
+  <div id="read-progress" aria-hidden="true"></div>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#top" class="brand" aria-label="Pay to Win Home">
+        <div class="brand-mark">P2W</div>
+        <div class="brand-text">
+          <span class="brand-title">PAY TO <span>WIN</span></span>
+          <span class="brand-sub">// KLXJ STUDIOS</span>
+        </div>
+      </a>
+
+      <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-expanded="false" aria-controls="nav-links">
+        MENU ☰
+      </button>
+
+      <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
+        <a href="#premise" class="nav-link">Premise &amp; Lore</a>
+        <a href="#dilemma" class="nav-link">30s Dilemma</a>
+        <a href="#arsenal" class="nav-link">6-Weapon Arsenal</a>
+        <a href="#waves" class="nav-link">7-Day Waves</a>
+        <a href="#level-design" class="nav-link">Tactical Map</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#specs" class="nav-link">Specs &amp; Controls</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="#team" class="nav-link">Team</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#trailer-player" class="btn btn-primary btn-sm">Watch Trailer ▶</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- =====================================================================
+         1. HERO SECTION & OFFICIAL 1080p60 GAME TRAILER
+         ===================================================================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid" id="hero-grid">
+
+          <!-- Left Column: Title, Premise & Metadata -->
+          <div>
+            <div class="eyebrow">
+              <span class="pulse-dot red"></span>
+              KLXJ STUDIOS PRESENTS &bull; 3RD-PERSON TACTICAL HORDE SHOOTER
+            </div>
+            <h1 class="hero-title">
+              PAY TO <span>WIN</span>
+            </h1>
+            <p class="hero-lead" id="hero-tagline">
+              A 7-day post-apocalyptic third-person survival horde shooter where sacred relics, tactical gunsmithing, and salvage economics decide whether the human retinue survives until dawn.
+            </p>
+
+            <!-- The User's Official Premise Callout -->
+            <div class="premise-box">
+              <div class="premise-box-header">
+                <span>● THE PREMISE // BLOODSPORT VS. LIFE SUPPORT</span>
+                <span>30s INTERMISSION</span>
+              </div>
+              <p id="premise-body">
+                Your family is dying in the ICU. Your only way to pay their medical bills is to survive a televised zombie bloodsport. Every kill earns credits, and every <strong>30-second intermission</strong> forces an agonizing choice: spend your earnings on weapons to make the arena easier, or save it to keep your family breathing.
+              </p>
+              <p class="premise-quote" id="premise-hook">
+                "In Pay to Win, every upgrade pushes your loved ones closer to the grave. How much of their life are you willing to spend to save your own?"
+              </p>
+            </div>
+
+            <div class="hero-ctas">
+              <a href="download.html" class="btn btn-primary">
+                Download &amp; Play
+              </a>
+              <a href="#dilemma" class="btn btn-secondary">
+                Try 30s Dilemma ↓
+              </a>
+              <a href="https://kjbgranddev.github.io/PayToWin_Documentation/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                Official Docs ↗
+              </a>
+            </div>
+
+            <div class="quick-stats">
+              <div class="stat-card">
+                <span class="stat-label">Genre</span>
+                <span class="stat-val">3rd-Person Survival</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Engine</span>
+                <span class="stat-val">Unity 2022.3 URP</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Platform</span>
+                <span class="stat-val">Windows PC (x86_64)</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Milestone</span>
+                <span class="stat-val" style="color: var(--brass);">Build v2.0.60</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Official Video Trailer Player -->
+          <div id="trailer-player">
+            <div class="trailer-shell">
+              <div class="trailer-topbar">
+                <span style="color: var(--brass); font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
+                  <span class="pulse-dot red"></span>
+                  OFFICIAL GAME TRAILER — 1080p 60FPS
+                </span>
+                <span id="trailer-timecode" style="color: var(--text-muted);">00:00 / 00:38</span>
+              </div>
+
+              <div class="trailer-video-wrap">
+                <video
+                  id="official-trailer-video"
+                  controls
+                  preload="metadata"
+                  poster="assets/shot_combat_m4a1.png"
+                  playsinline
+                >
+                  <source src="assets/PayToWin_Official_Trailer.mp4" type="video/mp4" />
+                  <source src="../PayToWin_Official_Trailer.mp4" type="video/mp4" />
+                  Your browser does not support HTML5 video playback.
+                </video>
+              </div>
+
+              <div class="trailer-controls-bar">
+                <div class="trailer-btn-group">
+                  <button type="button" id="trailer-play-btn" class="btn btn-primary btn-sm">
+                    ▶ Play Trailer
+                  </button>
+                  <button type="button" id="trailer-mute-btn" class="btn btn-secondary btn-sm">
+                    🔊 Audio: ON
+                  </button>
+                  <button type="button" id="trailer-theater-btn" class="btn btn-secondary btn-sm" title="Expand video across full width">
+                    ⛶ Theater Mode
+                  </button>
+                </div>
+                <span style="color: var(--emerald); font-size: 11.5px;">
+                  PayToWin_Official_Trailer.mp4 (H.264 / AAC)
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         2. STORYLINE, SACRED RELICS & INTERACTIVE 30-SECOND DILEMMA
+         ===================================================================== -->
+    <section class="section section-alt" id="premise">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">01 // NARRATIVE &amp; CORE HOOK</div>
+            <h2 class="section-title">Sacred Relics, Demonic Hordes &amp; Salvage Economics</h2>
+            <p class="section-subtitle">
+              Combining high-stakes moral survival with tactical 7-day wave defense across infected swamp ruins.
+            </p>
+          </div>
+          <span class="pill brass">Target Audience: Ages 16+</span>
+        </div>
+
+        <!-- Story Cinematic Player (Subtitled & Volume-Normalized) -->
+        <div class="story-cinematic-shell" id="story-cinematic">
+          <div class="story-cinematic-grid" id="story-cinematic-grid">
+            <div class="story-cinematic-player">
+              <div class="trailer-topbar">
+                <span style="color: var(--crimson); font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
+                  <span class="pulse-dot red"></span>
+                  <span id="story-cinematic-title">OFFICIAL STORY CINEMATIC — SUBTITLED 1080p</span>
+                </span>
+                <span id="story-timecode" style="color: var(--text-muted);">00:00 / 00:53</span>
+              </div>
+
+              <div class="story-video-wrap">
+                <video
+                  id="story-complete-video"
+                  controls
+                  loading="lazy"
+                  preload="metadata"
+                  width="1920"
+                  height="1070"
+                  poster="assets/poster-story-complete.jpg"
+                  playsinline
+                  aria-labelledby="story-cinematic-title"
+                  aria-details="story-transcript"
+                >
+                  <source src="assets/PayToWin_Story_Complete_Subtitled.mp4" type="video/mp4" />
+                  <track src="assets/PayToWin_Story_Complete_Subtitled.vtt" kind="captions" srclang="en" label="English" />
+                  Your browser does not support HTML5 video playback.
+                </video>
+              </div>
+
+              <div class="trailer-controls-bar">
+                <div class="trailer-btn-group">
+                  <button type="button" id="story-play-btn" class="btn btn-primary btn-sm">
+                    ▶ Play Story
+                  </button>
+                  <button type="button" id="story-mute-btn" class="btn btn-secondary btn-sm">
+                    🔊 Story Audio: ON
+                  </button>
+                  <button type="button" id="story-theater-btn" class="btn btn-secondary btn-sm" aria-label="Theater Mode — Story Cinematic" aria-expanded="false">
+                    ⛶ Theater Mode
+                  </button>
+                </div>
+                <span style="color: var(--emerald); font-size: 11.5px;">
+                  PayToWin_Story_Complete_Subtitled.mp4 • Burned-in Subtitles • −15 LUFS
+                </span>
+              </div>
+            </div>
+
+            <div class="story-cinematic-info">
+              <div>
+                <span class="pill crimson" style="margin-bottom: 12px;">PROLOGUE CUTSCENE &bull; 00:53</span>
+                <h3 class="story-cinematic-heading">The Debt Written in Blood</h3>
+                <p style="color: var(--text-dim); font-size: 14.5px; margin: 0 0 12px;">
+                  After a reckless crash leaves all seven members of his family clinging to life in the ICU, the protagonist faces a hospital bill he can never pay—until a stranger offers a brutal bargain inside the Dead Zone.
+                </p>
+                <p style="color: var(--text-dim); font-size: 14px; margin: 0 0 16px;">
+                  Every wound endured and every wave survived feeds directly into the 30-second intermission dilemma below: spend salvage to stay alive, or wire it home to keep them breathing.
+                </p>
+              </div>
+
+              <details class="story-transcript" id="story-transcript">
+                <summary>View Full Story Transcript</summary>
+                <div class="story-transcript-body">
+                  <p><em>[Rain falls over a darkened city at night]</em></p>
+                  <p>“Every sin carries a debt. And mine was written in blood. I was the one behind the wheel that night. My recklessness caused the crash, yet I was the only one who walked away.”</p>
+                  <p><em>[Quiet hospital hallway; heart monitors beeping steadily]</em></p>
+                  <p>“I sat in that cold hallway, hating myself for surviving. Behind that glass, all seven members of my family were dying... because of me.”</p>
+                  <p>“The doctor handed me the bill that could save them. A price I could never afford for the lives I ruined.”</p>
+                  <p><em>[Rain pours outside the emergency entrance]</em></p>
+                  <p>“Then a stranger offered me a way to atone: Enter the Dead Zone, and trade my life for theirs.”</p>
+                  <p><em>[Fire crackles in the rain across the Dead Zone swamp]</em></p>
+                  <p>“Every scar, every drop of my blood is the debt I owe them. My life is the only currency left to buy back their souls. And if death is the price of their tomorrow... I will pay to win.”</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-grid">
+          <div class="card">
+            <div class="card-title">
+              <span>The Unholy Plague &amp; Covenant Ark</span>
+              <span class="pill crimson">World Lore</span>
+            </div>
+            <p style="color: var(--text-dim); margin-bottom: 12px;">
+              After the original biblical stone tablets are uncovered, the Pope grasps the artifact—binding Satan’s shackles as firmly as when God first cast him down. In retaliation, Hell descends upon the mortal world, unleashing an unholy plague that turns mankind into demonic zombies.
+            </p>
+            <p style="color: var(--text-dim); margin: 0;">
+              Conventional survival supplies (food, water, and trauma kits) can be scavenged from ruined settlements, but <strong>blessed bullets and sacred wards</strong> can only be replenished through liturgical prayer—leaving the five-person divine retinue vulnerable during prayer windows as you escort the Covenant Ark toward the Pope’s sanctuary.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>Risk vs. Economy: Every Bullet Has a Price</span>
+              <span class="pill emerald">Core Loop</span>
+            </div>
+            <p style="color: var(--text-dim); margin-bottom: 12px;">
+              Across seven escalating nights inside a <strong>360° Holographic Combat Zone</strong>, every infected kill awards Salvage Cash (<code>$</code>). Wave completion triggers a timed <strong>30-second Buying Phase / Respite Sanctuary</strong> intermission window.
+            </p>
+            <p style="color: var(--text-dim); margin: 0;">
+              Press <kbd>B</kbd> to open the <strong>Salvage Armory</strong> with three tactical tabs: <strong>Workbench &amp; Ammo</strong> (weapon unlocks, 5-tier gun part upgrades, and ammo packs), <strong>Field Stims</strong> (bought directly into inventory up to 5 stacks), and <strong>500-Point Ballistic Armor Plates</strong>. Every dollar spent on firepower is a dollar taken from your family’s ICU survival fund.
+            </p>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE 30-SECOND INTERMISSION SIMULATOR -->
+        <div class="dilemma-panel" id="dilemma">
+          <div class="section-header" style="margin-bottom: 20px;">
+            <div>
+              <div class="eyebrow">INTERACTIVE GAMEPLAY SIMULATOR</div>
+              <h3 style="font-size: 24px; margin: 0;">Experience the 30-Second Intermission Dilemma</h3>
+              <p style="color: var(--text-dim); font-size: 14.5px; margin: 4px 0 0;">
+                Wave 3 cleared. You earned <strong>$2,850 Salvage Cash</strong>. How will you split your earnings before the next siren sounds?
+              </p>
+            </div>
+            <button type="button" id="sim-reset-btn" class="btn btn-secondary btn-sm">
+              ↺ Reset Intermission ($2,850)
+            </button>
+          </div>
+
+          <div class="dilemma-grid">
+            <!-- Left Telemetry Status -->
+            <div class="telemetry-box">
+              <div class="telemetry-header">
+                <div>
+                  <span class="stat-label">Respite Timer</span>
+                  <span class="telemetry-val" style="color: var(--brass);">00:30s</span>
+                </div>
+                <div style="text-align: right;">
+                  <span class="stat-label">Salvage Cash Balance</span>
+                  <span class="telemetry-val" id="sim-cash" style="color: var(--emerald);">$2,850</span>
+                </div>
+              </div>
+
+              <div class="meter-group">
+                <div class="meter-label-row">
+                  <span>Family ICU Life-Support Stability</span>
+                  <span id="sim-icu-label" style="color: var(--emerald);">55% (Bills Due)</span>
+                </div>
+                <div class="meter-track">
+                  <div id="sim-icu-bar" class="meter-fill" style="width: 55%; background: var(--emerald);"></div>
+                </div>
+              </div>
+
+              <div class="meter-group">
+                <div class="meter-label-row">
+                  <span>Survivor Arsenal &amp; 500-Pt Armor Rig</span>
+                  <span id="sim-gun-label" style="color: var(--brass);">35% (Starter M4A1 Only)</span>
+                </div>
+                <div class="meter-track">
+                  <div id="sim-gun-bar" class="meter-fill" style="width: 35%; background: var(--brass);"></div>
+                </div>
+              </div>
+
+              <div id="sim-log" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--text-dim); background: var(--bg-card); padding: 12px; border-radius: 8px; border: 1px solid var(--border);">
+                [TERMINAL READY]: Choose whether to unlock Salvage Armory weapons or wire funds to the ICU Ward.
+              </div>
+            </div>
+
+            <!-- Right Decision Cards -->
+            <div class="dilemma-choices">
+              <div class="choice-card armory-choice">
+                <div>
+                  <span class="pill brass" style="margin-bottom: 10px;">SALVAGE ARMORY [B]</span>
+                  <h4 style="font-size: 18px; margin: 0 0 8px;">Unlock Weapons &amp; Gunsmith Parts</h4>
+                  <p style="font-size: 13.5px; color: var(--text-dim); margin: 0 0 12px;">
+                    Spend cash on the <strong>Auto Shotgun 12G ($950)</strong> or <strong>5-Tier Part Upgrades ($500)</strong> to survive Day 3 Riot Cop Specials—at the expense of unpaid ICU bills.
+                  </p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                  <button type="button" class="btn btn-primary btn-sm" data-sim-action="shotgun">
+                    Unlock Auto Shotgun 12G (-$950)
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-sm" data-sim-action="upgrade">
+                    Buy Tier-2 Gun Part &amp; Plates (-$500)
+                  </button>
+                </div>
+              </div>
+
+              <div class="choice-card icu-choice">
+                <div>
+                  <span class="pill emerald" style="margin-bottom: 10px;">HOSPITAL WIRE TRANSFER</span>
+                  <h4 style="font-size: 18px; margin: 0 0 8px;">Pay Family ICU Life-Support Bill</h4>
+                  <p style="font-size: 13.5px; color: var(--text-dim); margin: 0 0 12px;">
+                    Keep your family breathing in intensive care, forcing you to enter the next night wave relying solely on starter weapons and raw aim.
+                  </p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                  <button type="button" class="btn btn-emerald btn-sm" data-sim-action="icu-full">
+                    Wire Full ICU Installment (-$950)
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-sm" data-sim-action="icu-min">
+                    Pay Minimum Oxygen Fee (-$500)
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. CANON 6-WEAPON ARSENAL & SALVAGE ECONOMY
+         ===================================================================== -->
+    <section class="section" id="arsenal">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">02 // TACTICAL WORKBENCH &amp; LOADOUTS</div>
+            <h2 class="section-title">The 6-Weapon Arsenal &amp; Salvage Economy</h2>
+            <p class="section-subtitle">
+              All six official weapons from Build v2.0.60 with authentic unlock prices, calibers, ammo pack costs, and combat roles. Click any weapon’s <strong>View Combat HUD</strong> button to inspect it in action.
+            </p>
+          </div>
+          <div class="pill emerald">Pine-Emerald = Affordable Part Cards in v2.0.58+</div>
+        </div>
+
+        <div class="weapons-grid" id="weapons-grid">
+          <!-- Weapon 1: M4A1 -->
+          <article class="weapon-card">
+            <div>
+              <div class="weapon-img-box">
+                <span class="weapon-slot-tag">SLOT 1</span>
+                <img src="assets/wep_m4a1.png" alt="M4A1 Assault Rifle" loading="lazy" />
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 6px;">
+                <h3 style="font-size: 19px; margin: 0;">M4A1 Assault Rifle</h3>
+                <span class="pill emerald">Starter (Free)</span>
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-dim); margin: 0 0 12px;">
+                Standard-issue tactical carbine equipped from Day 1 Wave 1. Upgraded in v2.0.58 to <code>60/300</code> starting reserve ammo for sustained fire.
+              </p>
+            </div>
+            <div>
+              <div class="weapon-stats-list">
+                <div class="weapon-stat-row"><span>Caliber:</span> <strong>5.56mm NATO</strong></div>
+                <div class="weapon-stat-row"><span>Ammo Pack:</span> <strong style="color: var(--brass);">+60 rounds / $75</strong></div>
+                <div class="weapon-stat-row"><span>Start Loadout:</span> <strong>60 / 300 Reserve</strong></div>
+                <div class="weapon-stat-row"><span>Combat Role:</span> <strong>Balanced All-Rounder</strong></div>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" style="width: 100%; margin-top: 14px;" data-lightbox-src="assets/shot_combat_m4a1.png" data-lightbox-title="M4A1 Assault Rifle — Day 1 Wave 1 Combat HUD" data-lightbox-caption="Day 1 Wave 1 combat with enlarged minimap, night-vision cone, and $1,800 HUD.">
+                View Combat HUD Screenshot
+              </button>
+            </div>
+          </article>
+
+          <!-- Weapon 2: Tactical 9mm Pistol -->
+          <article class="weapon-card">
+            <div>
+              <div class="weapon-img-box">
+                <span class="weapon-slot-tag">SLOT 2</span>
+                <img src="assets/wep_pistol.png" alt="Tactical 9mm Pistol" loading="lazy" />
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 6px;">
+                <h3 style="font-size: 19px; margin: 0;">Tactical 9mm Pistol</h3>
+                <span class="pill emerald">Starter (Free)</span>
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-dim); margin: 0 0 12px;">
+                High-reliability sidearm with unlimited reserve magazines. Guarantees you never face the horde unarmed when saving cash during intermissions.
+              </p>
+            </div>
+            <div>
+              <div class="weapon-stats-list">
+                <div class="weapon-stat-row"><span>Caliber:</span> <strong>9mm Parabellum</strong></div>
+                <div class="weapon-stat-row"><span>Ammo Pack:</span> <strong style="color: var(--emerald);">Unlimited Reserve</strong></div>
+                <div class="weapon-stat-row"><span>Upgrade Tiers:</span> <strong>5-Tier Gunsmith</strong></div>
+                <div class="weapon-stat-row"><span>Combat Role:</span> <strong>Last-Defense Sidearm</strong></div>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" style="width: 100%; margin-top: 14px;" data-lightbox-src="assets/shot_armory.png" data-lightbox-title="Salvage Armory Workbench UI ([B])" data-lightbox-caption="High-contrast Salvage Armory UI showing 5-tier gun part upgrades and ammo resupply.">
+                View Armory Workbench UI
+              </button>
+            </div>
+          </article>
+
+          <!-- Weapon 3: Auto Shotgun 12G -->
+          <article class="weapon-card">
+            <div>
+              <div class="weapon-img-box">
+                <span class="weapon-slot-tag">SLOT 3</span>
+                <img src="assets/wep_shotgun.png" alt="Auto Shotgun 12G" loading="lazy" />
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 6px;">
+                <h3 style="font-size: 19px; margin: 0;">Auto Shotgun 12G</h3>
+                <span class="pill brass">$950 Unlock</span>
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-dim); margin: 0 0 12px;">
+                Semi-automatic 12-gauge combat shotgun built to stagger Rabid Rushers and breach clustered infected inside the 360° perimeter.
+              </p>
+            </div>
+            <div>
+              <div class="weapon-stats-list">
+                <div class="weapon-stat-row"><span>Caliber:</span> <strong>12G Buckshot</strong></div>
+                <div class="weapon-stat-row"><span>Ammo Pack:</span> <strong style="color: var(--brass);">+16 shells / $85</strong></div>
+                <div class="weapon-stat-row"><span>Upgrade Tiers:</span> <strong>5-Tier Gunsmith</strong></div>
+                <div class="weapon-stat-row"><span>Combat Role:</span> <strong>Close-Range Breacher</strong></div>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" style="width: 100%; margin-top: 14px;" data-lightbox-src="assets/shot_combat_shotgun.png" data-lightbox-title="Auto Shotgun 12G — Close-Range Crowd Breacher" data-lightbox-caption="Close-quarters crowd control using the $950 Auto Shotgun 12G.">
+                View Combat HUD Screenshot
+              </button>
+            </div>
+          </article>
+
+          <!-- Weapon 4: Vulcan Minigun -->
+          <article class="weapon-card">
+            <div>
+              <div class="weapon-img-box">
+                <span class="weapon-slot-tag">SLOT 4</span>
+                <img src="assets/wep_minigun.png" alt="Vulcan Minigun" loading="lazy" />
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 6px;">
+                <h3 style="font-size: 19px; margin: 0;">Vulcan Minigun</h3>
+                <span class="pill brass">$2,200 Unlock</span>
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-dim); margin: 0 0 12px;">
+                Heavy rotary machine gun that shreds Day 3–5 Riot Cop Armored Specials and suppresses multi-directional 45m horde waves.
+              </p>
+            </div>
+            <div>
+              <div class="weapon-stats-list">
+                <div class="weapon-stat-row"><span>Caliber:</span> <strong>7.62mm Belt</strong></div>
+                <div class="weapon-stat-row"><span>Ammo Pack:</span> <strong style="color: var(--brass);">+150 rounds / $140</strong></div>
+                <div class="weapon-stat-row"><span>Upgrade Tiers:</span> <strong>5-Tier Gunsmith</strong></div>
+                <div class="weapon-stat-row"><span>Combat Role:</span> <strong>Sustained Suppression</strong></div>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" style="width: 100%; margin-top: 14px;" data-lightbox-src="assets/shot_combat_minigun.png" data-lightbox-title="Vulcan Minigun — 7.62mm Horde Suppression" data-lightbox-caption="Sustained 7.62mm rotary suppression fire clearing mid-to-late wave infected squads.">
+                View Combat HUD Screenshot
+              </button>
+            </div>
+          </article>
+
+          <!-- Weapon 5: Devastator RPG-7 -->
+          <article class="weapon-card">
+            <div>
+              <div class="weapon-img-box">
+                <span class="weapon-slot-tag">SLOT 5</span>
+                <img src="assets/wep_rpg.png" alt="Devastator RPG-7" loading="lazy" />
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 6px;">
+                <h3 style="font-size: 19px; margin: 0;">Devastator RPG-7</h3>
+                <span class="pill crimson">$2,600 Unlock</span>
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-dim); margin: 0 0 12px;">
+                Heavy explosive launcher engineered for the Day 6 Wave 4 Goliath Brute and Day 7 Wave 6 Dual-Boss climax encounters.
+              </p>
+            </div>
+            <div>
+              <div class="weapon-stats-list">
+                <div class="weapon-stat-row"><span>Caliber:</span> <strong>85mm Warhead</strong></div>
+                <div class="weapon-stat-row"><span>Ammo Pack:</span> <strong style="color: var(--brass);">+2 rockets / $160</strong></div>
+                <div class="weapon-stat-row"><span>Upgrade Tiers:</span> <strong>5-Tier Gunsmith</strong></div>
+                <div class="weapon-stat-row"><span>Combat Role:</span> <strong>Boss &amp; Goliath Breaker</strong></div>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" style="width: 100%; margin-top: 14px;" data-lightbox-src="assets/shot_combat_day7_rpg.png" data-lightbox-title="Devastator RPG-7 — Day 7 Heavy Ordnance Wave" data-lightbox-caption="Late-wave heavy ordnance engagement with boundary alert & horde radar.">
+                View Combat HUD Screenshot
+              </button>
+            </div>
+          </article>
+
+          <!-- Weapon 6: Apocalypse Chainsaw -->
+          <article class="weapon-card">
+            <div>
+              <div class="weapon-img-box">
+                <span class="weapon-slot-tag">SLOT 6</span>
+                <img src="assets/wep_chainsaw.png" alt="Apocalypse Chainsaw" loading="lazy" />
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 6px;">
+                <h3 style="font-size: 19px; margin: 0;">Apocalypse Chainsaw</h3>
+                <span class="pill brass">$1,400 Unlock</span>
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-dim); margin: 0 0 12px;">
+                Motorized 2-stroke melee weapon requiring zero ammunition refills—ideal for conserving Salvage Cash when overrun at point-blank range.
+              </p>
+            </div>
+            <div>
+              <div class="weapon-stats-list">
+                <div class="weapon-stat-row"><span>Caliber:</span> <strong>2-Stroke Edge</strong></div>
+                <div class="weapon-stat-row"><span>Ammo Pack:</span> <strong style="color: var(--emerald);">Infinite Fuel</strong></div>
+                <div class="weapon-stat-row"><span>Upgrade Tiers:</span> <strong>5-Tier Gunsmith</strong></div>
+                <div class="weapon-stat-row"><span>Combat Role:</span> <strong>Overrun Melee Shredder</strong></div>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" style="width: 100%; margin-top: 14px;" data-lightbox-src="assets/shot_combat_chainsaw.png" data-lightbox-title="Apocalypse Chainsaw — Melee Overrun Defense" data-lightbox-caption="Zero-ammo infinite-fuel overrun defense with the $1,400 Apocalypse Chainsaw.">
+                View Combat HUD Screenshot
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. 7-DAY WAVE PROGRESSION & CHARACTER / ENEMY PROFILES
+         ===================================================================== -->
+    <section class="section section-alt" id="waves">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">03 // CAMPAIGN ESCALATION &amp; FACTIONS</div>
+            <h2 class="section-title">7-Day Horde Escalation &amp; Entity Profiles</h2>
+            <p class="section-subtitle">
+              Switch between campaign phases below to inspect how enemy waves scale from Day 1 civilian swarms to the Day 7 Dual-Boss climax.
+            </p>
+          </div>
+
+          <div class="tabs-bar" role="tablist" aria-label="7-Day Campaign Tiers">
+            <button type="button" class="tab-btn active" data-wave-tab="0" role="tab" aria-selected="true">Days 1–2: Outbreak</button>
+            <button type="button" class="tab-btn" data-wave-tab="1" role="tab" aria-selected="false">Days 3–5: Riot Cop Specials</button>
+            <button type="button" class="tab-btn" data-wave-tab="2" role="tab" aria-selected="false">Days 6–7: Goliath Bosses</button>
+          </div>
+        </div>
+
+        <!-- Interactive Wave Tier Showcase -->
+        <div class="wave-showcase-card">
+          <div>
+            <span class="pill emerald" id="wave-badge" style="margin-bottom: 12px;">Early Escalation • Standard Swarm</span>
+            <h3 id="wave-title" style="font-size: 26px; margin-bottom: 12px;">Days 1–2: Civilian Infected &amp; Rabid Rushers</h3>
+            <p id="wave-desc" style="color: var(--text-dim); margin-bottom: 20px;">
+              The outbreak begins around the Respite Sanctuary campfire. Fast, erratic Rabid Rushers and predictive flankers test your stamina and night-vision situational awareness while you bank early Salvage Cash ($).
+            </p>
+
+            <div class="weapon-stats-list" style="background: var(--bg); padding: 16px; border-radius: 10px; border: 1px solid var(--border);">
+              <div class="weapon-stat-row">
+                <span>Spawn Vectors:</span>
+                <strong id="wave-spawns">4 Cardinal Directions (45m Radius)</strong>
+              </div>
+              <div class="weapon-stat-row">
+                <span>Active Threat Classes:</span>
+                <strong id="wave-enemies" style="color: var(--crimson);">Civilian Infected, Rabid Rushers</strong>
+              </div>
+              <div class="weapon-stat-row">
+                <span>Recommended Loadout:</span>
+                <strong id="wave-gear" style="color: var(--brass);">M4A1 (60/300), Tactical 9mm, Auto Shotgun ($950)</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="wave-shot-preview" id="wave-shot-trigger" title="Click to enlarge screenshot">
+            <img id="wave-shot-img" src="assets/shot_combat_m4a1.png" alt="Wave Combat Preview" />
+          </div>
+        </div>
+
+        <!-- Character, Retinue & Enemy Faction Cards -->
+        <h3 style="font-size: 22px; margin-bottom: 18px;">Character, Divine Retinue &amp; Unholy Horde Roster</h3>
+        <div class="entities-grid">
+          <div class="card">
+            <div class="card-title">
+              <span>The Survivor (Player)</span>
+              <span class="pill emerald">Retinue Escort</span>
+            </div>
+            <p style="font-size: 14px; color: var(--text-dim); margin: 0;">
+              Equipped with a tactical backpack rig, flashlight, 500-point Ballistic Armor Rig, and Salvage Armory link. Clears infected waves, guards the perimeter, and manages loadout upgrades.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>The Archbishop</span>
+              <span class="pill emerald">Divine Retinue</span>
+            </div>
+            <p style="font-size: 14px; color: var(--text-dim); margin: 0;">
+              Bears the Sacred Covenant Ark &amp; Reliquary Container; anchors the sanctuary pilgrimage across the infected swamp ruins toward the Pope's holy sanctuary.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>Two Priests &amp; Two Nuns</span>
+              <span class="pill emerald">Divine Retinue</span>
+            </div>
+            <p style="font-size: 14px; color: var(--text-dim); margin: 0;">
+              Perform liturgical prayers to sanctify blessed ammunition and sacred wards while relying on the player’s perimeter defense during vulnerable prayer windows.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>Civilian &amp; Rabid Rushers</span>
+              <span class="pill brass">Unholy Horde</span>
+            </div>
+            <p style="font-size: 14px; color: var(--text-dim); margin: 0;">
+              Primary Day 1–2 swarm units; Rushers close distance rapidly along predictive flanking vectors, testing player stamina, dodge rolls, and target priority.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>Riot Cop Armored Special</span>
+              <span class="pill brass">Unholy Horde</span>
+            </div>
+            <p style="font-size: 14px; color: var(--text-dim); margin: 0;">
+              Introduced from Day 3 onward; carries heavy ballistic durability and knockback resistance, rewarding 5-tier upgraded weapon damage and high-caliber fire.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>Goliath Brute &amp; Bosses</span>
+              <span class="pill crimson">Boss Tier</span>
+            </div>
+            <p style="font-size: 14px; color: var(--text-dim); margin: 0;">
+              High-HP climax threats spawning on late waves (Day 6 Wave 4 and Day 7 Dual-Boss Wave 6), designed around Devastator RPG-7 bursts and full armor rigs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. LEVEL DESIGN & TACTICAL 360° COMBAT ZONE MAP
+         ===================================================================== -->
+    <section class="section" id="level-design">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">04 // LEVEL ARCHITECTURE &amp; SPAWN VECTORS</div>
+            <h2 class="section-title">Level Design: World_OpenSurvival_Map.unity</h2>
+            <p class="section-subtitle">
+              Structured around a central Respite Sanctuary campfire surrounded by swamp boardwalks, timber ruins, and foliage cover. Leaving the <strong>360° Holographic Barrier</strong> triggers critical unholy damage warnings.
+            </p>
+          </div>
+          <span class="pill brass">45m 4-Quadrant Horde Spawns</span>
+        </div>
+
+        <div class="map-frame">
+          <svg viewBox="0 0 840 420" role="img" aria-label="Tactical Combat Zone and 4-Quadrant Spawn Map Sketch">
+            <defs>
+              <radialGradient id="zoneGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#2ecc8a" stop-opacity="0.12"/>
+                <stop offset="75%" stop-color="#f2ad38" stop-opacity="0.07"/>
+                <stop offset="100%" stop-color="#fa7373" stop-opacity="0.18"/>
+              </radialGradient>
+            </defs>
+            <rect width="840" height="420" fill="#080b0f"/>
+            <g stroke="#1b2330" stroke-width="1">
+              <line x1="0" y1="70" x2="840" y2="70"/><line x1="0" y1="140" x2="840" y2="140"/>
+              <line x1="0" y1="210" x2="840" y2="210"/><line x1="0" y1="280" x2="840" y2="280"/>
+              <line x1="0" y1="350" x2="840" y2="350"/>
+              <line x1="140" y1="0" x2="140" y2="420"/><line x1="280" y1="0" x2="280" y2="420"/>
+              <line x1="420" y1="0" x2="420" y2="420"/><line x1="560" y1="0" x2="560" y2="420"/>
+              <line x1="700" y1="0" x2="700" y2="420"/>
+            </g>
+
+            <!-- 45m Spawn Ring & Holographic Barrier -->
+            <circle cx="310" cy="210" r="165" fill="url(#zoneGrad)" stroke="#f2ad38" stroke-width="2.5" stroke-dasharray="10 6"/>
+            <circle cx="310" cy="210" r="115" fill="none" stroke="#2ecc8a" stroke-width="1.2" stroke-opacity="0.5"/>
+            <circle cx="310" cy="210" r="34" fill="rgba(46,204,138,0.16)" stroke="#2ecc8a" stroke-width="2"/>
+
+            <!-- Campfire & Beacon -->
+            <circle cx="310" cy="210" r="7" fill="#38ff14"/>
+            <text x="310" y="196" fill="#edf2f7" font-family="Chakra Petch, monospace" font-size="11" font-weight="700" text-anchor="middle">SANCTUARY BEACON</text>
+            <text x="310" y="232" fill="#2ecc8a" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">Player + Retinue</text>
+
+            <!-- 4 Quadrant Spawn Vectors -->
+            <g fill="#fa7373" stroke="#fa7373" stroke-width="1.8">
+              <circle cx="310" cy="45" r="7"/><line x1="310" y1="56" x2="310" y2="95"/>
+              <circle cx="475" cy="210" r="7"/><line x1="464" y1="210" x2="425" y2="210"/>
+              <circle cx="310" cy="375" r="7"/><line x1="310" y1="364" x2="310" y2="325"/>
+              <circle cx="145" cy="210" r="7"/><line x1="156" y1="210" x2="195" y2="210"/>
+            </g>
+            <text x="310" y="29" fill="#fa7373" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">N SQUAD (45m Fan-Out)</text>
+            <text x="310" y="400" fill="#fa7373" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">S SQUAD (45m Fan-Out)</text>
+            <text x="64" y="206" fill="#fa7373" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">W SQUAD</text>
+            <text x="488" y="200" fill="#fa7373" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="start">E SQUAD</text>
+
+            <!-- Legend Panel -->
+            <rect x="575" y="42" width="235" height="336" rx="8" fill="#12171f" stroke="#263040"/>
+            <text x="595" y="72" fill="#f2ad38" font-family="Chakra Petch, monospace" font-size="13" font-weight="700">TACTICAL MAP KEY</text>
+            <circle cx="603" cy="104" r="6" fill="#38ff14"/>
+            <text x="618" y="108" fill="#edf2f7" font-size="12.5">Player &amp; Night-Vision Cone</text>
+            <rect x="597" y="128" width="12" height="12" fill="none" stroke="#f2ad38" stroke-width="2" stroke-dasharray="3 2"/>
+            <text x="618" y="138" fill="#edf2f7" font-size="12.5">360° Combat Zone Barrier</text>
+            <circle cx="603" cy="166" r="6" fill="#fa7373"/>
+            <text x="618" y="170" fill="#edf2f7" font-size="12.5">4-Direction Horde Spawn (45m)</text>
+            <circle cx="603" cy="196" r="6" fill="#2ecc8a"/>
+            <text x="618" y="200" fill="#edf2f7" font-size="12.5">Respite Sanctuary Relocation</text>
+
+            <line x1="595" y1="224" x2="790" y2="224" stroke="#263040"/>
+            <text x="595" y="250" fill="#b4c0d0" font-family="JetBrains Mono, monospace" font-size="11">DAY 1–2: Civilian + Rushers</text>
+            <text x="595" y="274" fill="#b4c0d0" font-family="JetBrains Mono, monospace" font-size="11">DAY 3–5: Riot Cop Specials</text>
+            <text x="595" y="298" fill="#b4c0d0" font-family="JetBrains Mono, monospace" font-size="11">DAY 6 W4: Boss Encounter</text>
+            <text x="595" y="322" fill="#f2ad38" font-family="JetBrains Mono, monospace" font-size="11">DAY 7 W6: Dual-Boss Climax</text>
+            <text x="595" y="354" fill="#7f8ea3" font-size="11">Scene: World_OpenSurvival_Map</text>
+          </svg>
+          <div class="map-caption">
+            Schematic of <code>World_OpenSurvival_Map.unity</code> showing the 360° Holographic Barrier, central Sanctuary Beacon, and 45m 4-quadrant horde spawn vectors.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. IN-GAME MEDIA & COMBAT SCREENSHOT GALLERY
+         ===================================================================== -->
+    <section class="section section-alt" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">05 // VISUAL ARCHIVE</div>
+            <h2 class="section-title">In-Game Combat &amp; Salvage Armory Captures</h2>
+            <p class="section-subtitle">
+              Click any capture to inspect full-resolution 1080p gameplay HUD details, enlarged night-vision minimap, and Pine-Emerald Armory upgrade cards.
+            </p>
+          </div>
+          <div class="tabs-bar" id="gallery-filters" role="group" aria-label="Filter Screenshots">
+            <button type="button" class="tab-btn active" data-filter="all">All Captures (7)</button>
+            <button type="button" class="tab-btn" data-filter="combat">Combat HUD (5)</button>
+            <button type="button" class="tab-btn" data-filter="ui">Armory &amp; Sanctuary (2)</button>
+          </div>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <div class="shot-card" data-category="ui" data-lightbox-src="assets/shot_campfire_clean.png" data-lightbox-title="Respite Sanctuary Perimeter" data-lightbox-caption="Swamp sanctuary perimeter and restricted engagement barrier at dusk.">
+            <div class="shot-img-wrap">
+              <img src="assets/shot_campfire_clean.png" alt="Campfire Sanctuary Perimeter" loading="lazy" />
+            </div>
+            <div class="shot-meta">
+              <h4>Respite Sanctuary Perimeter</h4>
+              <p>Swamp sanctuary campfire and 360° holographic engagement barrier at dusk.</p>
+            </div>
+          </div>
+
+          <div class="shot-card" data-category="combat" data-lightbox-src="assets/shot_combat_m4a1.png" data-lightbox-title="Day 1 Wave 1 M4A1 Combat HUD" data-lightbox-caption="Day 1 Wave 1 combat with enlarged minimap, night-vision cone, and $1,800 HUD.">
+            <div class="shot-img-wrap">
+              <img src="assets/shot_combat_m4a1.png" alt="Day 1 M4A1 Combat HUD" loading="lazy" />
+            </div>
+            <div class="shot-meta">
+              <h4>Day 1 Wave 1 M4A1 Combat HUD</h4>
+              <p>Enlarged night-vision cone minimap, neon-green reticle, and $1,800 Salvage Cash HUD.</p>
+            </div>
+          </div>
+
+          <div class="shot-card" data-category="ui" data-lightbox-src="assets/shot_armory.png" data-lightbox-title="Salvage Armory Shop UI ([B])" data-lightbox-caption="High-contrast Salvage Armory UI showing Pine-Emerald affordable part cards.">
+            <div class="shot-img-wrap">
+              <img src="assets/shot_armory.png" alt="Salvage Armory Shop UI" loading="lazy" />
+            </div>
+            <div class="shot-meta">
+              <h4>Salvage Armory &amp; Gunsmith UI</h4>
+              <p>High-contrast Titanium/Orange/Pine-Emerald shop interface with 5-tier weapon part cards.</p>
+            </div>
+          </div>
+
+          <div class="shot-card" data-category="combat" data-lightbox-src="assets/shot_combat_shotgun.png" data-lightbox-title="Auto Shotgun 12G Crowd Breacher" data-lightbox-caption="Close-range buckshot engagement against flanking infected inside the perimeter.">
+            <div class="shot-img-wrap">
+              <img src="assets/shot_combat_shotgun.png" alt="Auto Shotgun 12G Combat" loading="lazy" />
+            </div>
+            <div class="shot-meta">
+              <h4>Auto Shotgun 12G Breach</h4>
+              <p>Stopping Rabid Rushers at close quarters with 12-gauge buckshot.</p>
+            </div>
+          </div>
+
+          <div class="shot-card" data-category="combat" data-lightbox-src="assets/shot_combat_chainsaw.png" data-lightbox-title="Apocalypse Chainsaw Melee Shredder" data-lightbox-caption="Overrun melee defense with infinite 2-stroke fuel and 14-slot pooled viscera VFX.">
+            <div class="shot-img-wrap">
+              <img src="assets/shot_combat_chainsaw.png" alt="Apocalypse Chainsaw Combat" loading="lazy" />
+            </div>
+            <div class="shot-meta">
+              <h4>Apocalypse Chainsaw Melee</h4>
+              <p>Zero-ammo overrun defense shredding swarms at point-blank range.</p>
+            </div>
+          </div>
+
+          <div class="shot-card" data-category="combat" data-lightbox-src="assets/shot_combat_minigun.png" data-lightbox-title="Vulcan Minigun Horde Suppression" data-lightbox-caption="Sustained 7.62mm rotary belt fire clearing mid-to-late wave armored infected.">
+            <div class="shot-img-wrap">
+              <img src="assets/shot_combat_minigun.png" alt="Vulcan Minigun Combat" loading="lazy" />
+            </div>
+            <div class="shot-meta">
+              <h4>Vulcan Minigun Suppression</h4>
+              <p>Heavy 7.62mm belt-fed rotary fire suppressing multi-directional squad spawns.</p>
+            </div>
+          </div>
+
+          <div class="shot-card" data-category="combat" data-lightbox-src="assets/shot_combat_day7_rpg.png" data-lightbox-title="Day 7 Devastator RPG-7 Climax Wave" data-lightbox-caption="Late-wave heavy ordnance engagement with boundary alert & horde radar.">
+            <div class="shot-img-wrap">
+              <img src="assets/shot_combat_day7_rpg.png" alt="Day 7 RPG-7 Heavy Wave" loading="lazy" />
+            </div>
+            <div class="shot-meta">
+              <h4>Day 7 Devastator RPG-7 Climax</h4>
+              <p>85mm anti-armor warhead engagement with boundary alert &amp; horde radar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         7. SYSTEM REQUIREMENTS & PLATFORM CONTROLS
+         ===================================================================== -->
+    <section class="section" id="specs">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">06 // HARDWARE &amp; INPUT BINDINGS</div>
+            <h2 class="section-title">System Requirements &amp; Platform Controls</h2>
+            <p class="section-subtitle">
+              Tuned for Windows PC (x86_64) Keyboard &amp; Mouse with Universal Render Pipeline (URP 14.0.12).
+            </p>
+          </div>
+          <span class="pill brass placeholder-item">Specs Customizable in js/gameData.js</span>
+        </div>
+
+        <div class="specs-controls-grid">
+          <!-- Left: System Requirements Table -->
+          <div>
+            <h3 style="font-size: 20px; margin-bottom: 14px;">Hardware Specifications (Windows x86_64)</h3>
+            <div class="table-wrap placeholder-item">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Minimum Spec</th>
+                    <th>Recommended Spec</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>OS</strong></td>
+                    <td>Windows 10 (64-bit)</td>
+                    <td>Windows 10 / 11 (64-bit)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Processor</strong></td>
+                    <td>Intel Core i3-6100 / Ryzen 3 1200</td>
+                    <td>Intel Core i5-10400 / Ryzen 5 3600</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Memory</strong></td>
+                    <td>8 GB RAM</td>
+                    <td>16 GB Dual-Channel RAM</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Graphics</strong></td>
+                    <td>GTX 1050 / Radeon RX 560</td>
+                    <td>GTX 1660 Super / RTX 2060</td>
+                  </tr>
+                  <tr>
+                    <td><strong>DirectX / Pipeline</strong></td>
+                    <td>DirectX 11 (Unity URP 14.0.12)</td>
+                    <td>DirectX 12 (60+ FPS @ 1080p)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Storage</strong></td>
+                    <td>4 GB available space</td>
+                    <td>4 GB SSD space</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Right: Controls & QA Hotkeys Table -->
+          <div>
+            <h3 style="font-size: 20px; margin-bottom: 14px;">Controls &amp; QA Testing Hotkeys</h3>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Input / Action</th>
+                    <th>Keybinding</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Locomotion</strong></td>
+                    <td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Move &middot; <kbd>Shift</kbd> Sprint &middot; <kbd>Space</kbd> Jump/Roll</td>
+                    <td><span class="pill emerald">Supported</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Combat &amp; Aim</strong></td>
+                    <td><kbd>Mouse</kbd> Look &middot; <kbd>LMB</kbd> Fire/Melee &middot; <kbd>RMB</kbd> ADS</td>
+                    <td><span class="pill emerald">Supported</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Weapon Switch</strong></td>
+                    <td><kbd>1</kbd>–<kbd>6</kbd> or <kbd>Scroll</kbd> Switch &middot; <kbd>R</kbd> Reload</td>
+                    <td><span class="pill emerald">Supported</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Salvage Armory</strong></td>
+                    <td><kbd>B</kbd> Open/Close Shop &middot; <kbd>F</kbd> Refill All &middot; <kbd>G</kbd> Buy +60 Ammo</td>
+                    <td><span class="pill emerald">Supported</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dev / QA Tools</strong></td>
+                    <td><kbd>F9</kbd> Unlock All Guns &middot; <kbd>F10</kbd> God Mode &middot; <kbd>F11</kbd> Wave Menu</td>
+                    <td><span class="pill brass">Dev / QA</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gamepad / Others</strong></td>
+                    <td>Basic movement via Invector; macOS/Linux/Mobile unsupported</td>
+                    <td><span class="pill crimson">PC Only</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         8. INSTALLATION PROCESS & HOW TO BUILD / RUN
+         ===================================================================== -->
+    <section class="section section-alt" id="install">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">07 // DEPLOYMENT &amp; EXECUTION GUIDE</div>
+            <h2 class="section-title">Installation Process &amp; How to Build</h2>
+            <p class="section-subtitle">
+              Step-by-step instructions for running the standalone Windows PC build or compiling directly from source in Unity 2022.3.62f3 LTS.
+            </p>
+          </div>
+          <a href="https://github.com/KJBGrandDev/PayToWin_Documentation" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            Open GitHub Repository ↗
+          </a>
+        </div>
+
+        <div class="index-download-banner release-status-banner status-preparing" id="index-release-banner">
+          <div class="index-download-info">
+            <div class="release-status-top">
+              <span class="pill brass" id="index-release-pill">Build Export in Progress</span>
+              <span class="pill brass" data-preview-pill hidden>PREVIEW MODE (?preview=ready)</span>
+              <span class="font-mono" style="font-size: 12px; color: var(--text-muted);">
+                <strong style="color: var(--text);" data-release-version>v2.0.60</strong>
+                &bull; <span data-release-format>Windows Installer (.exe)</span>
+                &bull; <span data-release-filesize class="placeholder-item">TBD (Pending Unity Export)</span>
+              </span>
+            </div>
+            <p id="index-release-message" style="margin: 8px 0 6px; font-size: 14px; color: var(--text-dim);">
+              Our development team is finalizing and packaging the Windows PC (x86_64) build from Unity 2022.3.62f3 LTS. The direct download link will go live here as soon as export and QA verification finish.
+            </p>
+            <div class="font-mono" style="font-size: 12px; color: var(--text-muted);">
+              Target Artifact: <code data-release-filename class="placeholder-item">PayToWin_Setup_v2.0.60.exe</code>
+            </div>
+          </div>
+          <div class="index-download-actions">
+            <a href="download.html" class="btn btn-primary btn-sm">
+              Open Download Portal &rarr;
+            </a>
+            <a
+              id="index-download-cta"
+              class="btn btn-secondary btn-sm btn-disabled"
+              role="button"
+              tabindex="0"
+              aria-disabled="true"
+            >
+              ⏳ Export in Progress — Download Pending
+            </a>
+          </div>
+        </div>
+
+        <div class="install-grid">
+          <!-- Player Standalone Installation -->
+          <div>
+            <h3 style="font-size: 20px; margin-bottom: 14px;">Option A: Standalone Windows PC Release</h3>
+            <div class="step-list" data-release-steps>
+              <div class="step-card placeholder-item">
+                <div class="step-num">1</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Download Official Windows Installer</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Download <code>PayToWin_Setup_v2.0.60.exe</code> (<code>v2.0.60</code>) from GitHub Releases via the <a href="download.html" style="color: var(--brass); text-decoration: underline;">Download Portal</a>.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Verify Integrity &amp; Run Setup</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Optionally verify the SHA-256 checksum on the Download Portal, then run <code>PayToWin_Setup_v2.0.60.exe</code> (or extract all files together if using a portable <code>.zip</code>).
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Launch Executable &amp; Enter the Combat Zone</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Run <code>PayToWin.exe</code>. In Build <code>v2.0.60</code>, press <kbd>F9</kbd> if you want to toggle between all-weapons showcase mode and normal progression unlocking.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Developer Unity Build Instructions (From Official Docs) -->
+          <div>
+            <h3 style="font-size: 20px; margin-bottom: 14px;">Option B: Build &amp; Run from Unity Source</h3>
+            <div class="step-list">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Install Unity 2022.3.62f3 LTS</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Open Unity Hub and install <strong>Unity <code>2022.3.62f3 LTS</code></strong> with the <strong>Windows Build Support (IL2CPP or Mono)</strong> module.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Load Main Survival Scene</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Open the project in Unity Hub, navigate to <code>Assets/_Project/Scenes/World_OpenSurvival_Map.unity</code> in the Project window, and open the scene.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Play in Editor or Build Standalone (x86_64)</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Press <strong>Play</strong> in the Editor, or go to <strong>File &rarr; Build Settings &rarr; Windows (x86_64)</strong> and click <strong>Build And Run</strong>.
+                  </p>
+                  <div class="code-block">
+[F9]  Toggle Unlock All Guns (defaults ON in v2.0.60)
+[F10] Toggle Immortal / God Mode (locks HP, Stamina, Shield)
+[F11] Open QA Round &amp; Wave Jump Menu (Days 1–7 / Bosses)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         9. MEET THE DEVELOPMENT TEAM (CANON CREDITS)
+         ===================================================================== -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">08 // KLXJ STUDIOS &bull; PROJECT CREDITS &amp; CONTRIBUTORS</div>
+            <h2 class="section-title">Meet the Team &mdash; KLXJ Studios</h2>
+            <p class="section-subtitle">
+              The engineers, designers, and documentation architects at <strong>KLXJ Studios</strong> behind <strong>Pay to Win</strong> (Milestone v2.0.60).
+            </p>
+          </div>
+          <span class="pill emerald">KLXJ Studios &bull; Official Roster</span>
+        </div>
+
+        <div class="team-grid">
+          <!-- Kent Basalan -->
+          <div class="team-card">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                <div class="team-avatar" style="background: var(--brass-dim); border: 1px solid var(--brass); color: var(--brass);">
+                  KB
+                </div>
+                <span class="pill brass">Lead Dev</span>
+              </div>
+              <h3 style="font-size: 19px; margin: 0 0 4px;">Kent Basalan</h3>
+              <div class="font-mono" style="font-size: 12px; color: var(--brass); margin-bottom: 10px;">
+                Game Developer &amp; Narrative Designer
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-dim); margin: 0;">
+                Core C# gameplay architecture, 7-day horde progression, Salvage Armory economy, HUD systems, and Holy vs. Devil narrative worldbuilding.
+              </p>
+            </div>
+            <div class="font-mono" style="font-size: 11.5px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 10px;">
+              Systems: WorldHordeManager, TacticalArsenalStoreHUD
+            </div>
+          </div>
+
+          <!-- Luis Pingul -->
+          <div class="team-card" style="border-color: rgba(46, 204, 138, 0.45);">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                <div class="team-avatar" style="background: var(--emerald-dim); border: 1px solid var(--emerald); color: var(--emerald);">
+                  LP
+                </div>
+                <span class="pill emerald">Web Architect</span>
+              </div>
+              <h3 style="font-size: 19px; margin: 0 0 4px;">Luis Pingul</h3>
+              <div class="font-mono" style="font-size: 12px; color: var(--emerald); margin-bottom: 10px;">
+                Official Website &amp; Documentation Engineer
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-dim); margin: 0;">
+                Official game portal &amp; documentation site engineering, GitHub Pages structure, interactive 30s intermission simulator, trailer showcase, and wasteland-tactical UI.
+              </p>
+            </div>
+            <div class="font-mono" style="font-size: 11.5px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 10px;">
+              Systems: Web Portal, Interactive Docs &amp; Media Hub
+            </div>
+          </div>
+
+          <!-- Xienna Pugoy -->
+          <div class="team-card">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                <div class="team-avatar" style="background: var(--blue-dim); border: 1px solid var(--blue); color: var(--blue);">
+                  XP
+                </div>
+                <span class="pill blue">Documentation</span>
+              </div>
+              <h3 style="font-size: 19px; margin: 0 0 4px;">Xienna Pugoy</h3>
+              <div class="font-mono" style="font-size: 12px; color: var(--blue); margin-bottom: 10px;">
+                GDD &amp; Mechanics Specification
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-dim); margin: 0;">
+                Game Design Document compilation, core survival mechanics &amp; salvage economy specification, and structured gameplay documentation.
+              </p>
+            </div>
+            <div class="font-mono" style="font-size: 11.5px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 10px;">
+              Systems: GDD Architecture &amp; Mechanics Reference
+            </div>
+          </div>
+
+          <!-- Jushua Sanchez -->
+          <div class="team-card">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                <div class="team-avatar" style="background: var(--blue-dim); border: 1px solid var(--blue); color: var(--blue);">
+                  JS
+                </div>
+                <span class="pill blue">Docs &amp; QA</span>
+              </div>
+              <h3 style="font-size: 19px; margin: 0 0 4px;">Jushua Sanchez</h3>
+              <div class="font-mono" style="font-size: 12px; color: var(--blue); margin-bottom: 10px;">
+                Asset Auditing &amp; Playtest Curation
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-dim); margin: 0;">
+                Unity Asset Store package &amp; license auditing, playtest issue verification, version changelog tracking, and technical reference curation.
+              </p>
+            </div>
+            <div class="font-mono" style="font-size: 11.5px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 10px;">
+              Systems: Asset EULA Audit &amp; Playtest Feedback Log
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong style="color: var(--text); font-family: 'Chakra Petch', sans-serif;">PAY TO WIN</strong> &middot; Developed by <strong style="color: var(--brass);">KLXJ Studios</strong> &middot; Milestone Build <code>v2.0.60</code> &middot; Unity <code>2022.3.62f3 LTS</code>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px;">
+        <button type="button" id="toggle-placeholders-btn" class="pill brass" style="cursor: pointer;" title="Highlight fields that can still be customized in js/gameData.js">
+          Highlight Editable Placeholders: OFF
+        </button>
+        <a href="#top" style="color: var(--text-dim);">Top ↑</a>
+        <a href="https://kjbgranddev.github.io/PayToWin_Documentation/" target="_blank" rel="noopener noreferrer" style="color: var(--brass);">Official Documentation ↗</a>
+        <a href="https://github.com/KJBGrandDev/PayToWin_Documentation" target="_blank" rel="noopener noreferrer" style="color: var(--text-dim);">GitHub Repo ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    ↑ TOP
+  </button>
+
+  <!-- Native <dialog> Lightbox Modal for Screenshots -->
+  <dialog class="lightbox-dialog" id="lightbox-dialog" aria-label="Screenshot Preview">
+    <div class="lightbox-inner">
+      <div class="lightbox-header">
+        <div>
+          <h3 id="lightbox-title" style="font-size: 18px; margin: 0;">Screenshot Preview</h3>
+          <p id="lightbox-caption" style="font-size: 13px; color: var(--text-dim); margin: 2px 0 0;"></p>
+        </div>
+        <button type="button" id="lightbox-close-btn" class="btn btn-secondary btn-sm">
+          ✕ Close [ESC]
+        </button>
+      </div>
+      <div class="lightbox-img-container">
+        <img id="lightbox-img" src="" alt="Expanded gameplay capture" />
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="js/gameData.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/download.js"></script>
+</body>
+</html>

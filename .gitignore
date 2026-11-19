@@ -1,0 +1,29 @@
+# macOS / Windows OS metadata
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Editor / temporary files
+.vscode/
+.idea/
+*.swp
+*.tmp
+*.log
+
+# Staged game builds (publish via GitHub Releases, never commit large binaries to Git)
+releases/*
+!releases/README.md
+!releases/.gitkeep
+
+# Prevent accidental commits of Unity Windows builds or installers anywhere in the repo
+*.exe
+*.msi
+*.zip
+*.7z
+*.rar
+*.dll
+*.pdb
+*.sha256
+*_Data/
+MonoBleedingEdge/

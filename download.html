@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Pay to Win — Windows PC Build &amp; Release Portal | KLXJ Studios</title>
+  <meta name="description" content="Official Windows PC (x86_64) download, SHA-256 checksum verification, installation instructions, and release notes for Pay to Win by KLXJ Studios." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2313171F' stroke='%23F2AD38' stroke-width='2'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='monospace' font-size='13' font-weight='700' fill='%23F2AD38'%3EP%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Reading Progress Indicator -->
+  <div id="read-progress" aria-hidden="true"></div>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand" aria-label="Pay to Win Home">
+        <div class="brand-mark">P2W</div>
+        <div class="brand-text">
+          <span class="brand-title">PAY TO <span>WIN</span></span>
+          <span class="brand-sub">// KLXJ STUDIOS</span>
+        </div>
+      </a>
+
+      <nav class="nav-actions" aria-label="Primary Navigation">
+        <a href="index.html" class="btn btn-secondary btn-sm">← Game Portal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- =====================================================================
+         1. DOWNLOAD CONSOLE HERO & FILE VERIFICATION PANEL
+         ===================================================================== -->
+    <section class="download-hero">
+      <div class="container">
+        <div class="download-hero-grid">
+
+          <!-- Left Column: Build Status, Primary Download CTA & Quick Metadata -->
+          <div>
+            <div class="eyebrow">
+              <span class="pulse-dot"></span>
+              KLXJ STUDIOS &bull; WINDOWS PC (x86_64) RELEASE PORTAL
+              <span class="pill brass" data-preview-pill hidden>PREVIEW MODE (?preview=ready)</span>
+            </div>
+
+            <h1 class="hero-title">
+              DOWNLOAD PAY TO <span>WIN</span>
+            </h1>
+            <p class="hero-lead">
+              Official standalone Windows build distribution, SHA-256 integrity verification, and step-by-step installation guide for Milestone <code id="dl-version-inline" data-release-version>v2.0.60</code>.
+            </p>
+
+            <!-- Live Release Status Banner -->
+            <div class="release-status-banner status-preparing" id="release-status-banner" role="status" aria-live="polite">
+              <div class="release-status-top">
+                <span class="pill brass" id="release-status-pill">Build Export in Progress</span>
+                <span class="font-mono" style="font-size: 12px; color: var(--text-muted);">
+                  Hosted via GitHub Releases
+                </span>
+              </div>
+              <p id="release-status-message" style="margin: 8px 0 0; font-size: 14.5px; color: var(--text-dim);">
+                Our development team is finalizing and packaging the Windows PC (x86_64) build from Unity 2022.3.62f3 LTS. The direct download link will go live here as soon as export and QA verification finish.
+              </p>
+            </div>
+
+            <!-- Primary Download Actions -->
+            <div class="hero-ctas">
+              <a
+                id="primary-download-btn"
+                class="btn btn-secondary btn-disabled"
+                role="button"
+                tabindex="0"
+                aria-disabled="true"
+              >
+                ⏳ Export in Progress — Download Pending
+              </a>
+              <a
+                href="https://github.com/KJBGrandDev/PayToWin_Documentation/releases"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+                data-releases-link
+              >
+                GitHub Releases ↗
+              </a>
+              <a href="#install-steps" class="btn btn-secondary">
+                Install Guide ↓
+              </a>
+            </div>
+
+            <!-- Client OS Compatibility Notice -->
+            <div class="os-notice" id="dl-os-notice"></div>
+
+            <!-- 4-Card Build Metadata Grid -->
+            <div class="quick-stats">
+              <div class="stat-card">
+                <span class="stat-label">Version</span>
+                <span class="stat-val" id="dl-version" style="color: var(--brass);">v2.0.60</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Package Format</span>
+                <span class="stat-val" id="dl-format">Windows Installer (.exe)</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">File Size</span>
+                <span class="stat-val placeholder-item" id="dl-filesize">TBD (Pending Unity Export)</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Platform</span>
+                <span class="stat-val" id="dl-platform">Windows 10 / 11 (64-bit x86_64)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Tactical Release Card & Verification Panel -->
+          <div class="release-package-card" id="verify">
+            <div class="release-card-media">
+              <img src="assets/shot_combat_m4a1.png" alt="Pay to Win — Windows Standalone Build Preview" />
+              <span class="pill emerald release-card-badge">Unity 2022.3.62f3 LTS &bull; URP</span>
+            </div>
+
+            <div class="verify-box">
+              <div class="verify-header">
+                <span class="font-heading" style="font-size: 17px; font-weight: 700; color: var(--text);">
+                  File Verification &amp; Integrity
+                </span>
+                <a id="dl-checksum-link" href="#" target="_blank" rel="noopener noreferrer" class="pill emerald" hidden>
+                  Download .sha256 ↗
+                </a>
+              </div>
+
+              <div class="verify-meta-grid">
+                <div class="verify-meta-row">
+                  <span class="stat-label">Expected Artifact</span>
+                  <code id="dl-filename" class="placeholder-item verify-filename">PayToWin_Setup_v2.0.60.exe</code>
+                </div>
+                <div class="verify-meta-row">
+                  <span class="stat-label">Release Date</span>
+                  <span id="dl-releasedate" class="font-mono placeholder-item" style="font-size: 13px; color: var(--text-dim);">Pending Export</span>
+                </div>
+              </div>
+
+              <!-- SHA-256 Hash Block + Accessible Copy Button -->
+              <div class="verify-field">
+                <div class="verify-field-label">
+                  <span>SHA-256 Checksum</span>
+                  <span class="font-mono" style="font-size: 11px; color: var(--text-muted);">Verify before running</span>
+                </div>
+                <div class="verify-code-wrap">
+                  <pre class="verify-pre"><code id="dl-sha256" class="placeholder-item">PENDING_EXPORT_RUN_PREPARE_RELEASE_SCRIPT</code></pre>
+                  <span class="copy">
+                    <button
+                      type="button"
+                      class="copy-button"
+                      command="--copy"
+                      commandfor="dl-sha256"
+                      aria-label="Copy SHA-256 checksum"
+                    >
+                      <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <span class="tip" role="status"></span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- PowerShell Command Block + Accessible Copy Button -->
+              <div class="verify-field">
+                <div class="verify-field-label">
+                  <span>Windows PowerShell Verify Command</span>
+                  <span class="font-mono" style="font-size: 11px; color: var(--text-muted);">Compare output to hash above</span>
+                </div>
+                <div class="verify-code-wrap">
+                  <pre class="verify-pre"><code id="dl-ps-cmd">Get-FileHash ".\PayToWin_Setup_v2.0.60.exe" -Algorithm SHA256</code></pre>
+                  <span class="copy">
+                    <button
+                      type="button"
+                      class="copy-button"
+                      command="--copy"
+                      commandfor="dl-ps-cmd"
+                      aria-label="Copy PowerShell verification command"
+                    >
+                      <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <span class="tip" role="status"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         2. INSTALLATION PROCESS (OPTION A SYNCED WITH packageType + OPTION B)
+         ===================================================================== -->
+    <section class="section section-alt" id="install-steps">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">01 // DEPLOYMENT &amp; EXECUTION GUIDE</div>
+            <h2 class="section-title">How to Install &amp; Launch Pay to Win</h2>
+            <p class="section-subtitle">
+              Installation steps adapt automatically to the active release format configured in <code>js/gameData.js</code> (<code>.exe</code> installer or portable <code>.zip</code> bundle).
+            </p>
+          </div>
+          <a
+            href="https://github.com/KJBGrandDev/PayToWin_Documentation/releases"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-sm"
+            data-releases-link
+          >
+            All GitHub Releases ↗
+          </a>
+        </div>
+
+        <div class="install-grid">
+          <!-- Left: Option A (Format-aware, hydrated by js/download.js) -->
+          <div>
+            <h3 style="font-size: 20px; margin-bottom: 14px;">Option A: Standalone Windows PC Install</h3>
+            <div class="step-list" data-release-steps>
+              <div class="step-card placeholder-item">
+                <div class="step-num">1</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Download Official Windows Installer</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Download <code>PayToWin_Setup_v2.0.60.exe</code> (<code>v2.0.60</code>) from GitHub Releases using the primary download button above.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Verify Integrity &amp; Run Setup</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Optionally verify the SHA-256 checksum, then run <code>PayToWin_Setup_v2.0.60.exe</code> (click "More info &rarr; Run anyway" if Windows SmartScreen prompts for an unsigned indie installer).
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Launch <code>PayToWin.exe</code> &amp; Enter the Arena</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Launch <code>PayToWin.exe</code> from your Start Menu or installation folder. Press <kbd>F9</kbd> in Build <code>v2.0.60</code> to toggle all-weapons showcase mode.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Option B (Unity Source Build) -->
+          <div>
+            <h3 style="font-size: 20px; margin-bottom: 14px;">Option B: Build &amp; Run from Unity Source</h3>
+            <div class="step-list">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Install Unity 2022.3.62f3 LTS</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Open Unity Hub and install <strong>Unity <code>2022.3.62f3 LTS</code></strong> with the <strong>Windows Build Support (IL2CPP or Mono)</strong> module.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Load Main Survival Scene</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Open the project in Unity Hub, navigate to <code>Assets/_Project/Scenes/World_OpenSurvival_Map.unity</code> in the Project window, and open the scene.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 16px;">Play in Editor or Build Standalone (x86_64)</h4>
+                  <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
+                    Press <strong>Play</strong> in the Editor, or go to <strong>File &rarr; Build Settings &rarr; Windows (x86_64)</strong> and click <strong>Build And Run</strong>.
+                  </p>
+                  <div class="code-block">
+[F9]  Toggle Unlock All Guns (defaults ON in v2.0.60)
+[F10] Toggle Immortal / God Mode (locks HP, Stamina, Shield)
+[F11] Open QA Round &amp; Wave Jump Menu (Days 1–7 / Bosses)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. SYSTEM REQUIREMENTS & BUILD v2.0.60 RELEASE NOTES
+         ===================================================================== -->
+    <section class="section" id="requirements">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">02 // HARDWARE &amp; RELEASE NOTES</div>
+            <h2 class="section-title">System Requirements &amp; Build Highlights</h2>
+            <p class="section-subtitle">
+              Target hardware profile for Windows PC (x86_64) alongside verified gameplay systems in Milestone <code>v2.0.60</code>.
+            </p>
+          </div>
+          <a
+            href="https://kjbgranddev.github.io/PayToWin_Documentation/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary btn-sm"
+          >
+            Official Docs ↗
+          </a>
+        </div>
+
+        <div class="specs-controls-grid">
+          <!-- Left: Semantic Hardware Table -->
+          <div>
+            <h3 style="font-size: 20px; margin-bottom: 14px;">Windows PC (x86_64) Requirements</h3>
+            <div class="table-wrap placeholder-item">
+              <table class="specs-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Component</th>
+                    <th scope="col">Minimum Spec</th>
+                    <th scope="col">Recommended Spec</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">OS</th>
+                    <td>Windows 10 (64-bit)</td>
+                    <td>Windows 10 / 11 (64-bit)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Processor</th>
+                    <td>Intel Core i3-6100 / Ryzen 3 1200</td>
+                    <td>Intel Core i5-10400 / Ryzen 5 3600</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Memory</th>
+                    <td>8 GB RAM</td>
+                    <td>16 GB Dual-Channel RAM</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Graphics</th>
+                    <td>GTX 1050 / Radeon RX 560</td>
+                    <td>GTX 1660 Super / RTX 2060</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DirectX / Pipeline</th>
+                    <td>DirectX 11 (Unity URP 14.0.12)</td>
+                    <td>DirectX 12 (60+ FPS @ 1080p)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Storage</th>
+                    <td>4 GB available space</td>
+                    <td>4 GB SSD space</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Right: Release Notes / Changelog -->
+          <div>
+            <h3 style="font-size: 20px; margin-bottom: 14px;">Milestone Release Notes</h3>
+            <div class="card">
+              <div id="dl-changelog">
+                <div class="changelog-entry">
+                  <div class="changelog-entry-head">
+                    <strong>v2.0.60 — Milestone Release</strong>
+                    <span class="pill brass">Pending Export</span>
+                  </div>
+                  <ul class="changelog-list">
+                    <li>Complete 7-day escalating horde loop across Days 1–7 with Day 6 Goliath Brute and Day 7 Dual-Boss climax.</li>
+                    <li>Salvage Armory (<code>[B]</code>) featuring 6 weapons, 5-tier gunsmith part upgrades, Field Stims, and 500-pt Armor Rig.</li>
+                    <li>M4A1 upgraded to 60/300 starting reserve ammo and Tactical 9mm unlimited reserve magazines.</li>
+                    <li>Enlarged minimap with night-vision directional cone, 360° Holographic Combat Zone boundary alerts, and QA hotkeys (F9–F11).</li>
+                  </ul>
+                </div>
+              </div>
+              <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 10px;">
+                <a href="https://kjbgranddev.github.io/PayToWin_Documentation/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Read Full Documentation ↗
+                </a>
+                <a href="index.html#dilemma" class="btn btn-secondary btn-sm">
+                  Try 30s Dilemma Simulator →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. WINDOWS SMARTSCREEN & TROUBLESHOOTING FAQ (ACCESSIBLE ACCORDION)
+         ===================================================================== -->
+    <section class="section section-alt" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">03 // TROUBLESHOOTING &amp; SECURITY</div>
+            <h2 class="section-title" id="faq-heading">Windows SmartScreen &amp; Release FAQ</h2>
+            <p class="section-subtitle">
+              Common questions when installing an indie Unity Windows build, verifying file integrity, or launching on Windows 10/11.
+            </p>
+          </div>
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm accordion-toggle-all"
+            commandfor="download-faq"
+            command="--toggle-all"
+            aria-expanded="false"
+          >
+            <span class="expand">Expand all</span>
+            <span class="collapse">Collapse all</span>
+          </button>
+        </div>
+
+        <div class="accordion" id="download-faq">
+          <details>
+            <summary>Windows shows "Windows protected your PC" (SmartScreen warning) when opening the installer or .exe</summary>
+            <div class="accordion-body">
+              <p>
+                Student and indie Unity builds compiled without a paid commercial Authenticode code-signing certificate trigger Microsoft Defender SmartScreen on first launch.
+              </p>
+              <ol>
+                <li>First verify the downloaded file's SHA-256 hash matches the checksum shown in the <strong>File Verification &amp; Integrity</strong> panel above.</li>
+                <li>In the SmartScreen prompt, click <strong>More info</strong>, confirm the filename matches, and select <strong>Run anyway</strong>.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why do I get an error about missing UnityPlayer.dll or PayToWin_Data when running a portable .zip build?</summary>
+            <div class="accordion-body">
+              <p>
+                Unity Standalone Windows builds are not single self-contained binaries unless wrapped in an installer. If you downloaded a <code>.zip</code> archive, you must extract the <strong>entire archive</strong> to a folder (for example <code>C:\Games\PayToWin\</code>) before double-clicking <code>PayToWin.exe</code>.
+              </p>
+              <p>
+                Keep <code>PayToWin.exe</code>, <code>UnityPlayer.dll</code>, <code>PayToWin_Data/</code>, and <code>MonoBleedingEdge/</code> (or <code>GameAssembly.dll</code>) together in the same directory—do not drag only the <code>.exe</code> onto your Desktop.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How do I verify the SHA-256 checksum on Windows before running the build?</summary>
+            <div class="accordion-body">
+              <p>
+                Open <strong>Windows Terminal</strong> or <strong>PowerShell</strong> in your Downloads folder and run the verification command copied from the Verification panel above:
+              </p>
+              <pre class="code-block">Get-FileHash ".\PayToWin_Setup_v2.0.60.exe" -Algorithm SHA256</pre>
+              <p>
+                Compare the printed 64-character hex string (case-insensitive) with the official SHA-256 hash listed on this page and on GitHub Releases. If they do not match, re-download the package before executing it.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Is Pay to Win available for macOS, Linux, or mobile devices?</summary>
+            <div class="accordion-body">
+              <p>
+                No. Pay to Win is currently built and tested exclusively for <strong>Windows 10 / Windows 11 (64-bit x86_64)</strong> using Keyboard &amp; Mouse controls. macOS, Linux, and mobile builds are not supported in Milestone <code>v2.0.60</code>.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why does the download button say "Build Export in Progress" right now?</summary>
+            <div class="accordion-body">
+              <p>
+                The KLXJ Studios team is currently completing the final Unity export and packaging pass for the standalone Windows executable. As soon as the package is uploaded to GitHub Releases and verified, the direct download button and SHA-256 checksum on this page activate automatically. You can also check the <a href="https://github.com/KJBGrandDev/PayToWin_Documentation/releases" target="_blank" rel="noopener noreferrer" style="color: var(--brass); text-decoration: underline;" data-releases-link>GitHub Releases</a> page directly.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong style="color: var(--text); font-family: 'Chakra Petch', sans-serif;">PAY TO WIN</strong> &middot; Developed by <strong style="color: var(--brass);">KLXJ Studios</strong> &middot; Milestone Build <code>v2.0.60</code> &middot; Unity <code>2022.3.62f3 LTS</code>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px;">
+        <button type="button" id="toggle-placeholders-btn" class="pill brass" style="cursor: pointer;" title="Highlight fields that can still be customized in js/gameData.js">
+          Highlight Editable Placeholders: OFF
+        </button>
+        <a href="index.html" style="color: var(--text-dim);">Game Portal ←</a>
+        <a href="https://kjbgranddev.github.io/PayToWin_Documentation/" target="_blank" rel="noopener noreferrer" style="color: var(--brass);">Official Documentation ↗</a>
+        <a href="https://github.com/KJBGrandDev/PayToWin_Documentation" target="_blank" rel="noopener noreferrer" style="color: var(--text-dim);">GitHub Repo ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    ↑ TOP
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/gameData.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/download.js"></script>
+</body>
+</html>
