@@ -234,85 +234,74 @@
   }
 
   // =========================================================================
-  // 4. INTERACTIVE 30-SECOND INTERMISSION DILEMMA SIMULATOR
+  // 4. INTERACTIVE SIMULATOR: LIVE ICU GOALPOST TRADE-OFF (Docs v2.0.67)
   // =========================================================================
-  let simCash = 2850;
-  let simIcu = 55;
-  let simGun = 35;
+  const slider = document.getElementById("ladder-slider");
+  const cashOut = document.getElementById("ladder-cash");
+  const savedOut = document.getElementById("ladder-saved");
+  const verdictOut = document.getElementById("ladder-verdict");
+  const rungs = Array.from(document.querySelectorAll(".ladder-rung[data-req]"));
+  const presets = Array.from(document.querySelectorAll(".ladder-preset"));
 
-  const cashEl = document.getElementById("sim-cash");
-  const icuLabelEl = document.getElementById("sim-icu-label");
-  const icuBarEl = document.getElementById("sim-icu-bar");
-  const gunLabelEl = document.getElementById("sim-gun-label");
-  const gunBarEl = document.getElementById("sim-gun-bar");
-  const logEl = document.getElementById("sim-log");
-  const resetSimBtn = document.getElementById("sim-reset-btn");
+  if (slider && rungs.length) {
+    let peakCash = parseInt(slider.value, 10) || 0;
+    const epilogues = [
+      '0 / 7 Saved — "Seven Empty Chairs": Even a long run saves nobody if leftover cash is under $1,000.',
+      '1 / 7 Saved — "A Child\'s Lonely Breath": Maya wakes alone in St. Jude\'s while six sibling beds go dark.',
+      '2 / 7 Saved — "Two Small Shadows": Maya and Leo survive the dawn and wait beside silent curtains.',
+      '3 / 7 Saved — "A Mother Left to Count the Cost": Elena wakes with Maya and Leo—the rest of the bills fell short.',
+      '4 / 7 Saved — "Half a Table Left": Arthur watches over Elena, Leo, and Maya with unbearable guilt.',
+      '5 / 7 Saved — "Five Pulses, Two Empty Beds": Five live, but baby Lily and Sarah remain unpaid.',
+      '6 / 7 Saved — "One Unpaid Heartbeat": Everyone breathes at sunrise except Sarah ($17,500 goal).',
+      '7 / 7 Saved — "Every Sin Paid in Full": All seven family members wake together. Your sacrifice bought every dawn.'
+    ];
 
-  function renderSimulation(logMessage) {
-    if (cashEl) cashEl.textContent = "$" + simCash.toLocaleString();
-
-    if (icuBarEl) {
-      icuBarEl.style.width = simIcu + "%";
-      icuBarEl.style.background = simIcu <= 30 ? "var(--crimson)" : "var(--emerald)";
-    }
-    if (icuLabelEl) {
-      const status = simIcu <= 25 ? "CRITICAL / FLATLINING!" : simIcu >= 80 ? "Stabilized" : "Bills Due";
-      icuLabelEl.textContent = simIcu + "% (" + status + ")";
-      icuLabelEl.style.color = simIcu <= 25 ? "var(--crimson)" : "var(--emerald)";
-    }
-
-    if (gunBarEl) {
-      gunBarEl.style.width = simGun + "%";
-    }
-    if (gunLabelEl) {
-      const gunStatus = simGun >= 75 ? "Heavy Arsenal Ready" : simGun >= 55 ? "Combat Upgraded" : "Under-Equipped";
-      gunLabelEl.textContent = simGun + "% (" + gunStatus + ")";
-    }
-
-    if (logEl && logMessage) {
-      logEl.textContent = logMessage;
-    }
-  }
-
-  document.querySelectorAll("[data-sim-action]").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      const action = btn.getAttribute("data-sim-action");
-      const cost = action === "shotgun" || action === "icu-full" ? 950 : 500;
-
-      if (simCash < cost) {
-        renderSimulation("[INSUFFICIENT SALVAGE CASH]: You have $" + simCash + " remaining. Click 'Reset Intermission' to test another allocation.");
-        return;
+    function renderLadder(cash, resetPeak) {
+      if (resetPeak) {
+        peakCash = cash;
+      } else {
+        peakCash = Math.max(peakCash, cash);
       }
 
-      simCash -= cost;
+      let saved = 0;
+      rungs.forEach(function (r) {
+        const req = parseInt(r.dataset.req, 10) || 0;
+        const stEl = r.querySelector(".rung-status");
+        r.classList.remove("is-saved", "is-spent");
+        if (cash >= req) {
+          r.classList.add("is-saved");
+          saved++;
+          if (stEl) stEl.textContent = "SAVED • BILL PAID";
+        } else if (peakCash >= req) {
+          r.classList.add("is-spent");
+          if (stEl) stEl.textContent = "SPENT ($" + req.toLocaleString() + ")";
+        } else {
+          if (stEl) stEl.textContent = "$" + req.toLocaleString();
+        }
+      });
 
-      if (action === "shotgun") {
-        simGun = Math.min(100, simGun + 30);
-        simIcu = Math.max(10, simIcu - 20);
-        renderSimulation("[ARMORY UNLOCKED]: Purchased Auto Shotgun 12G (-$950). Arena firepower surged, but unpaid hospital bills caused Family ICU stability to drop!");
-      } else if (action === "upgrade") {
-        simGun = Math.min(100, simGun + 18);
-        simIcu = Math.max(10, simIcu - 12);
-        renderSimulation("[GUNSMITH UPGRADE]: Installed Tier-2 Weapon Part & 500-Pt Armor Plate (-$500). You are better protected, while ICU debt mounts.");
-      } else if (action === "icu-full") {
-        simIcu = Math.min(100, simIcu + 28);
-        simGun = Math.max(15, simGun - 10);
-        renderSimulation("[ICU WIRE SENT]: Paid $950 toward Family ICU Life Support. Their vitals stabilized, but you enter the next wave with unupgraded guns.");
-      } else if (action === "icu-min") {
-        simIcu = Math.min(100, simIcu + 15);
-        simGun = Math.max(15, simGun - 5);
-        renderSimulation("[OXYGEN FEE PAID]: Wired $500 minimum payment to the ICU. Bought your family another night, leaving minimal cash for ammunition.");
+      if (cashOut) cashOut.textContent = "$" + cash.toLocaleString();
+      if (savedOut) {
+        savedOut.textContent = saved + " / 7 SAVED";
+        savedOut.classList.toggle("is-zero", saved === 0);
       }
-    });
-  });
+      if (verdictOut) verdictOut.textContent = epilogues[Math.min(7, saved)];
+    }
 
-  if (resetSimBtn) {
-    resetSimBtn.addEventListener("click", function () {
-      simCash = 2850;
-      simIcu = 55;
-      simGun = 35;
-      renderSimulation("[TERMINAL RESET]: Wave 3 cleared with $2,850 Salvage Cash. Make your 30-second intermission choice.");
+    slider.addEventListener("input", function (e) {
+      renderLadder(parseInt(e.target.value, 10) || 0, false);
     });
+
+    presets.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const val = parseInt(btn.dataset.cash, 10) || 0;
+        const shouldReset = btn.dataset.resetPeak === "true";
+        slider.value = String(val);
+        renderLadder(val, shouldReset);
+      });
+    });
+
+    renderLadder(peakCash, false);
   }
 
   // =========================================================================

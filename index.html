@@ -33,7 +33,7 @@
 
       <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
         <a href="#premise" class="nav-link">Premise &amp; Lore</a>
-        <a href="#dilemma" class="nav-link">30s Dilemma</a>
+        <a href="#dilemma" class="nav-link">ICU Goalposts</a>
         <a href="#arsenal" class="nav-link">6-Weapon Arsenal</a>
         <a href="#waves" class="nav-link">7-Day Waves</a>
         <a href="#level-design" class="nav-link">Tactical Map</a>
@@ -288,98 +288,81 @@
           </div>
         </div>
 
-        <!-- INTERACTIVE 30-SECOND INTERMISSION SIMULATOR -->
+        <!-- FAMILY ICU LADDER, EXPENSE TALLY & 8 ENDINGS + LIVE ICU GOALPOST SIMULATOR -->
         <div class="dilemma-panel" id="dilemma">
-          <div class="section-header" style="margin-bottom: 20px;">
+          <div class="section-header" style="margin-bottom: 16px;">
             <div>
-              <div class="eyebrow">INTERACTIVE GAMEPLAY SIMULATOR</div>
-              <h3 style="font-size: 24px; margin: 0;">Experience the 30-Second Intermission Dilemma</h3>
-              <p style="color: var(--text-dim); font-size: 14.5px; margin: 4px 0 0;">
-                Wave 3 cleared. You earned <strong>$2,850 Salvage Cash</strong>. How will you split your earnings before the next siren sounds?
+              <div class="eyebrow">FAMILY ICU STAKES &amp; AFTERMATH SYSTEMS</div>
+              <h3 style="font-size: 24px; margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+                <span>Family ICU Ladder, Expense Tally &amp; 8 Endings</span>
+                <span class="pill emerald">v2.0.67</span>
+              </h3>
+              <p style="color: var(--text-dim); font-size: 14.5px; margin: 8px 0 0;">
+                Player survival without financial restraint is deliberately framed as a tragedy: reaching deep rounds only to bleed out with empty pockets leaves every ICU bed unpaid. Three interconnected UI systems enforce this core identity in real time and after death:
               </p>
             </div>
-            <button type="button" id="sim-reset-btn" class="btn btn-secondary btn-sm">
-              ↺ Reset Intermission ($2,850)
-            </button>
           </div>
 
-          <div class="dilemma-grid">
-            <!-- Left Telemetry Status -->
-            <div class="telemetry-box">
-              <div class="telemetry-header">
-                <div>
-                  <span class="stat-label">Respite Timer</span>
-                  <span class="telemetry-val" style="color: var(--brass);">00:30s</span>
-                </div>
-                <div style="text-align: right;">
-                  <span class="stat-label">Salvage Cash Balance</span>
-                  <span class="telemetry-val" id="sim-cash" style="color: var(--emerald);">$2,850</span>
-                </div>
+          <div class="feature-grid">
+            <div class="card">
+              <div class="card-title">
+                <span>Top-Left Live ICU Ladder</span>
+                <span class="pill emerald">FamilyGoalLadderHUD</span>
               </div>
-
-              <div class="meter-group">
-                <div class="meter-label-row">
-                  <span>Family ICU Life-Support Stability</span>
-                  <span id="sim-icu-label" style="color: var(--emerald);">55% (Bills Due)</span>
-                </div>
-                <div class="meter-track">
-                  <div id="sim-icu-bar" class="meter-fill" style="width: 55%; background: var(--emerald);"></div>
-                </div>
-              </div>
-
-              <div class="meter-group">
-                <div class="meter-label-row">
-                  <span>Survivor Arsenal &amp; 500-Pt Armor Rig</span>
-                  <span id="sim-gun-label" style="color: var(--brass);">35% (Starter M4A1 Only)</span>
-                </div>
-                <div class="meter-track">
-                  <div id="sim-gun-bar" class="meter-fill" style="width: 35%; background: var(--brass);"></div>
-                </div>
-              </div>
-
-              <div id="sim-log" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--text-dim); background: var(--bg-card); padding: 12px; border-radius: 8px; border: 1px solid var(--border);">
-                [TERMINAL READY]: Choose whether to unlock Salvage Armory weapons or wire funds to the ICU Ward.
-              </div>
+              <p style="font-size: 14px; color: var(--text-dim); margin: 0;">
+                Docked top-left during combat. Rises and turns <strong style="color: var(--emerald);">Emerald (SAVED)</strong> as cash climbs; immediately turns <strong style="color: var(--crimson);">Crimson (SPENT)</strong> whenever Armory spending drops you below a bed you previously reached.
+              </p>
             </div>
 
-            <!-- Right Decision Cards -->
-            <div class="dilemma-choices">
-              <div class="choice-card armory-choice">
-                <div>
-                  <span class="pill brass" style="margin-bottom: 10px;">SALVAGE ARMORY [B]</span>
-                  <h4 style="font-size: 18px; margin: 0 0 8px;">Unlock Weapons &amp; Gunsmith Parts</h4>
-                  <p style="font-size: 13.5px; color: var(--text-dim); margin: 0 0 12px;">
-                    Spend cash on the <strong>Auto Shotgun 12G ($950)</strong> or <strong>5-Tier Part Upgrades ($500)</strong> to survive Day 3 Riot Cop Specials—at the expense of unpaid ICU bills.
-                  </p>
-                </div>
-                <div style="display: flex; flex-direction: column; gap: 8px;">
-                  <button type="button" class="btn btn-primary btn-sm" data-sim-action="shotgun">
-                    Unlock Auto Shotgun 12G (-$950)
-                  </button>
-                  <button type="button" class="btn btn-secondary btn-sm" data-sim-action="upgrade">
-                    Buy Tier-2 Gun Part &amp; Plates (-$500)
-                  </button>
-                </div>
+            <div class="card">
+              <div class="card-title">
+                <span>"Who Have You Saved?" Tally</span>
+                <span class="pill brass">PlayerDeathHUD</span>
               </div>
+              <p style="font-size: 14px; color: var(--text-dim); margin: 0;">
+                Upon death, clicking <strong>WHO HAVE YOU SAVED?</strong> opens a categorized ledger itemizing <em>Total Earned</em>, <em>Weapons</em>, <em>Upgrades</em>, <em>Ammo</em>, and <em>Armor &amp; Stims</em> against all 7 ICU hospital bills.
+              </p>
+            </div>
 
-              <div class="choice-card icu-choice">
-                <div>
-                  <span class="pill emerald" style="margin-bottom: 10px;">HOSPITAL WIRE TRANSFER</span>
-                  <h4 style="font-size: 18px; margin: 0 0 8px;">Pay Family ICU Life-Support Bill</h4>
-                  <p style="font-size: 13.5px; color: var(--text-dim); margin: 0 0 12px;">
-                    Keep your family breathing in intensive care, forcing you to enter the next night wave relying solely on starter weapons and raw aim.
-                  </p>
-                </div>
-                <div style="display: flex; flex-direction: column; gap: 8px;">
-                  <button type="button" class="btn btn-emerald btn-sm" data-sim-action="icu-full">
-                    Wire Full ICU Installment (-$950)
-                  </button>
-                  <button type="button" class="btn btn-secondary btn-sm" data-sim-action="icu-min">
-                    Pay Minimum Oxygen Fee (-$500)
-                  </button>
-                </div>
+            <div class="card">
+              <div class="card-title">
+                <span>"The Story After You Died"</span>
+                <span class="pill blue">8 Unique Endings</span>
+              </div>
+              <p style="font-size: 14px; color: var(--text-dim); margin: 0;">
+                Computes which beds survived from final leftover cash (<code>0/7</code> up to <code>7/7</code>) and presents a tailored epilogue naming exact survivors, lost members, Day reached, and unspent payout.
+              </p>
+            </div>
+          </div>
+
+          <div class="ladder-sim" id="ladder-simulator">
+            <div class="ladder-sim-hdr">
+              <div class="ladder-sim-title">Interactive Simulator: Live ICU Goalpost Trade-Off</div>
+              <div class="ladder-sim-readout">
+                <span class="ladder-cash-pill" id="ladder-cash">$5,015</span>
+                <span class="ladder-saved-pill" id="ladder-saved">3 / 7 SAVED</span>
               </div>
             </div>
+            <div class="ladder-controls">
+              <input class="ladder-slider" id="ladder-slider" type="range" min="0" max="18000" step="25" value="5015" aria-label="Simulate Cash at Death" />
+              <div class="ladder-presets">
+                <button class="ladder-preset" type="button" data-cash="0" data-reset-peak="true">$0 (Reset)</button>
+                <button class="ladder-preset" type="button" data-cash="5015" data-reset-peak="true">$5,015 (3 Saved)</button>
+                <button class="ladder-preset" type="button" data-cash="9500" data-reset-peak="false">$9,500 (5 Saved)</button>
+                <button class="ladder-preset" type="button" data-cash="2500" data-reset-peak="false">Spend Down &rarr; $2,500</button>
+                <button class="ladder-preset" type="button" data-cash="17500" data-reset-peak="false">$17,500 (All 7)</button>
+              </div>
+            </div>
+            <div class="ladder-rungs">
+              <div class="ladder-rung" data-req="17500"><span class="rung-who">7. Sarah (Wife)</span><span class="rung-proc">Critical Heart Transplant</span><span class="rung-status">$17,500</span></div>
+              <div class="ladder-rung" data-req="13000"><span class="rung-who">6. Lily (Daughter, 3)</span><span class="rung-proc">Pediatric Neuro-Surgery</span><span class="rung-status">$13,000</span></div>
+              <div class="ladder-rung" data-req="9500"><span class="rung-who">5. Clara (Older Sister)</span><span class="rung-proc">Hemorrhage &amp; Organ Repair</span><span class="rung-status">$9,500</span></div>
+              <div class="ladder-rung" data-req="6500"><span class="rung-who">4. Arthur (Father)</span><span class="rung-proc">Spinal Reconstruction</span><span class="rung-status">$6,500</span></div>
+              <div class="ladder-rung" data-req="4000"><span class="rung-who">3. Elena (Mother)</span><span class="rung-proc">ICU Ventilator Care</span><span class="rung-status">$4,000</span></div>
+              <div class="ladder-rung" data-req="2250"><span class="rung-who">2. Leo (Brother, 14)</span><span class="rung-proc">Collapsed Lung Surgery</span><span class="rung-status">$2,250</span></div>
+              <div class="ladder-rung" data-req="1000"><span class="rung-who">1. Maya (Sister, 9)</span><span class="rung-proc">Emergency Blood Transfusion</span><span class="rung-status">$1,000</span></div>
+            </div>
+            <div class="ladder-verdict" id="ladder-verdict">3 / 7 Saved &mdash; "A Mother Left to Count the Cost": Elena wakes with Maya and Leo—the rest of the bills fell short.</div>
           </div>
         </div>
 
